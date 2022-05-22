@@ -20,7 +20,6 @@
 }
 
 #name .logo{
-    background-color: inherit;
     text-align:center;
     font-size: 30px;
     font-family: 'Ubuntu';
@@ -28,7 +27,6 @@
 }
 
 #name .menu li a{
-    background-color: inherit;
     text-align:right;
     font-size: 18px;
     font-family: 'Ubuntu';
