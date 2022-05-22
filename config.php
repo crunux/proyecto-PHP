@@ -5,7 +5,7 @@
  {
    $bio = $_GET["Ebiografia"];
    file_put_contents("biografia.txt", $bio, FILE_APPEND);
-   header("Location: admin.php" );
+   header("Location: index.php" );
     
  }
 
