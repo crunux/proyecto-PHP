@@ -7,11 +7,16 @@
     padding:0;
     box-sizing: border-box;
     text-decoration: none;
+<<<<<<< HEAD
     background-color: #fff;
+=======
+    background-color:#ffffff;
+>>>>>>> 2bb170962eebc9953be330bce21e6750c1f76e95
 }
 
 <!--NavBar-->
 
+<<<<<<< HEAD
 #navbar{
     position: fixed;
     width:100%;
@@ -34,6 +39,30 @@
 }
 
 #navbar .menu li{
+=======
+#name{
+    position: fixed;
+    width:100%;
+    height: 10%;
+    background-color: #000;
+}
+
+#name .logo{
+    text-align:center;
+    font-size: 30px;
+    font-family: 'Ubuntu';
+    color: #fff;
+}
+
+#name .menu li a{
+    text-align:right;
+    font-size: 18px;
+    font-family: 'Ubuntu';
+    color: #fff;
+}
+
+#name .menu li{
+>>>>>>> 2bb170962eebc9953be330bce21e6750c1f76e95
     list-style: none;
     display: inline-block;
 }
@@ -121,7 +150,11 @@
     font-family:"Poppins"
 }
 
+<<<<<<< HEAD
 #EditarBiografia{
+=======
+#Ebiografia{
+>>>>>>> 2bb170962eebc9953be330bce21e6750c1f76e95
     text-align:justify;
     line-height: 100%;
     letter-spacing: normal;
@@ -129,6 +162,7 @@
     font-family: "Poppins";
 }
 
+<<<<<<< HEAD
 #descripcion {
     text-align: justify;
     line-height: 100%;
@@ -145,3 +179,5 @@
     font-weight: bold;
     color: #000;
 }
+=======
+>>>>>>> 2bb170962eebc9953be330bce21e6750c1f76e95

@@ -2,9 +2,21 @@
 
  if (isset($_GET["EditarBiografia"]))
  {
+<<<<<<< HEAD
    $bio = $_GET["EditarBiografia"];
    file_put_contents("biografia.txt", $bio);
    header("Location: admin.php" );
+=======
+<<<<<<< HEAD
+   $bio = $_GET["EditarBiografia"];
+   file_put_contents("biografia.txt", $bio);
+   header("Location: admin.php" );
+=======
+   $bio = $_GET["Ebiografia"];
+   file_put_contents("biografia.txt", $bio, FILE_APPEND);
+   header("Location: index.php" );
+>>>>>>> c19059613edee0803a00c5841c2a93232ba00832
+>>>>>>> 2bb170962eebc9953be330bce21e6750c1f76e95
     
  }
 

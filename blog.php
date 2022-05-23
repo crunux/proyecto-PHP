@@ -11,13 +11,18 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <nav id="navbar">
+=======
+    <nav id="name">
+>>>>>>> 2bb170962eebc9953be330bce21e6750c1f76e95
         <div class="logo">Joan Miguel Cruz - 100456854</div>
         <ul class="menu">
             <li><a href="">Home</a></li>
             <li><a href="">Admin</a></li>
         </ul>
     </nav>
+<<<<<<< HEAD
     <section>
         <div class="dblog">
             <H2 class="blogs">
@@ -38,6 +43,23 @@
         echo "</div>";
         ?>
     </section>
+=======
+    <?php
+    //file permite obtener el contenido de un archivo como un arreglo. Cada linea del archivo, representa un elemento del arreglo.
+    $blog = file("blog.txt");
+    echo "<table border='1'>";
+    for ($i = 0; $i < count($blog); $i++) {
+        echo "<tr>";
+        $filaActual = explode("|", $blog[$i]);
+        $id = $filaActual[0];
+        for ($j = 0; $j < count($filaActual); $j++) {
+            echo $i == 0 ? "<th>" . $filaActual[$j] . "</th>" : "<td>" . $filaActual[$j] . "</td>";
+        }
+        echo "</tr>";
+    }
+    echo "</table>";
+    ?>
+>>>>>>> 2bb170962eebc9953be330bce21e6750c1f76e95
 </body>
 
 </html>
