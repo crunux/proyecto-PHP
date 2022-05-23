@@ -7,33 +7,33 @@
     padding:0;
     box-sizing: border-box;
     text-decoration: none;
-    background-color:#ffffff;
+    background-color: #fff;
 }
 
 <!--NavBar-->
 
-#name{
+#navbar{
     position: fixed;
     width:100%;
     height: 10%;
-    background-color: #000;
+    background-color: #3F403F;
 }
 
-#name .logo{
+#navbar .logo{
     text-align:center;
     font-size: 30px;
     font-family: 'Ubuntu';
-    color: #fff;
+    color: #000;
 }
 
-#name .menu li a{
+#navbar .menu li a{
     text-align:right;
     font-size: 18px;
     font-family: 'Ubuntu';
-    color: #fff;
+    color: #000;
 }
 
-#name .menu li{
+#navbar .menu li{
     list-style: none;
     display: inline-block;
 }
@@ -121,7 +121,7 @@
     font-family:"Poppins"
 }
 
-#Ebiografia{
+#EditarBiografia{
     text-align:justify;
     line-height: 100%;
     letter-spacing: normal;
@@ -129,3 +129,19 @@
     font-family: "Poppins";
 }
 
+#descripcion {
+    text-align: justify;
+    line-height: 100%;
+    letter-spacing: normal;
+    font-family: 16px;
+    font-family: "Poppins";
+}
+
+<!--Blog Pages-->
+.blogs{
+    text-align: center;
+    font-family: "Ubuntu";
+    font-size: 20;
+    font-weight: bold;
+    color: #000;
+}

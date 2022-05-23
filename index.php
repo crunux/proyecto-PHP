@@ -12,7 +12,7 @@
 
 <body>
     <!--NavBar-->
-    <nav id="name">
+    <nav id="navbar">
         <div class="logo">Joan Miguel Cruz - 100456854</div>
         <ul class="menu">
             <li><a href="#">Admin</a></li>
@@ -27,8 +27,7 @@
         <h2 class="encabezadoB">Biografia</h2>
         <h3 class="bio">
             <?php
-            include("config.php");
-            echo $biografic
+            echo file_get_contents("biografia.txt");
             ?>
         </h3>
     </section>

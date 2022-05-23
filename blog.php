@@ -11,28 +11,33 @@
 </head>
 
 <body>
-    <nav id="name">
+    <nav id="navbar">
         <div class="logo">Joan Miguel Cruz - 100456854</div>
         <ul class="menu">
             <li><a href="">Home</a></li>
             <li><a href="">Admin</a></li>
         </ul>
     </nav>
-    <?php
-    //file permite obtener el contenido de un archivo como un arreglo. Cada linea del archivo, representa un elemento del arreglo.
-    $blog = file("blog.txt");
-    echo "<table border='1'>";
-    for ($i = 0; $i < count($blog); $i++) {
-        echo "<tr>";
-        $filaActual = explode("|", $blog[$i]);
-        $id = $filaActual[0];
-        for ($j = 0; $j < count($filaActual); $j++) {
-            echo $i == 0 ? "<th>" . $filaActual[$j] . "</th>" : "<td>" . $filaActual[$j] . "</td>";
+    <section>
+        <div class="dblog">
+            <H2 class="blogs">
+                Blogs
+            </H2>
+        </div>
+        <?php
+        //file permite obtener el contenido de un archivo como un arreglo. Cada linea del archivo, representa un elemento del arreglo.
+        $blog = file("blog.txt");
+        echo "<div class='card' style='width: 18rem;'>";
+        for ($i = 0; $i < count($blog); $i++) {
+            echo "<div class='card-body'>";
+            $filaActual = explode("|", $blog[$i]);
+            $id = $filaActual[0];
+            echo $i >= 0 ? "<h2 class='card-title'>" . $filaActual[1] . "</h2>" . "<h6 class='card-subtitle mb-2 text-muted'>" . $filaActual[2] . "</h6>" . "<h6 class='card-subtitle mb-2 text-muted'>" . "<p class='card-text'>" . $filaActual[3] . "</h6>" . $filaActual[4] . "</p>" : "<h6>" . "no se encontraron blogs" . "</h6>";
+            echo "</div>";
         }
-        echo "</tr>";
-    }
-    echo "</table>";
-    ?>
+        echo "</div>";
+        ?>
+    </section>
 </body>
 
 </html>
