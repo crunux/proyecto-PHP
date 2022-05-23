@@ -26,9 +26,8 @@
         </div>
         <h2 class="encabezadoB">Biografia</h2>
         <h3 class="bio">
-            <?php
-            include("config.php");
-            echo $biografic
+             <?php
+            echo file_get_contents("biografia.txt");
             ?>
         </h3>
     </section>
@@ -36,12 +35,19 @@
     <section class="secblog">
         <h2>Blog mas recientes.</h2>
         <div class="card text-bg-dark mb-3" style="max-width: 18rem;">
-            <div class="card-header">Header</div>
-                <div class="card-body">
-                    <h5 class="card-title">Dark card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                </div>
-            </div>
+        <?php
+                //file permite obtener el contenido de un archivo como un arreglo. Cada linea del archivo, representa un elemento del arreglo.
+                echo "<div class='row row-cols-1 row-cols-md-2 g-4'"; 
+                $blog = file("blog.txt");
+                    for ($i = 0; $i < count($blog); $i++) {
+                        $filaActual = explode("|", $blog[$i]);
+                        $id = $filaActual[0];
+                        echo "<div class='col'>.<div class='card text-bg-dark mb-3' style='max-width: 18rem;'>" . "<div class='card-body'>";
+                        echo $i >= 0 ? "<h5 class='card-title'>" . $filaActual[1] . "</h5>" . "<h6 class='card-subtitle mb-2 text-muted'>" . $filaActual[2] . "</h6>" . "<h6 class='card-subtitle mb-2 text-muted'>" . "<p class='card-text'>" . $filaActual[3] . "</h6>" . $filaActual[4] . "</p>" : "<h6>" . "no se encontraron blogs" . "</h6>";
+                        echo "</div>" . "</div>"."</div>";
+                    }
+                echo "</div>";
+                ?>
         </div>
     </section>
 </body>

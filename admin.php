@@ -33,7 +33,6 @@
         <h2>Registro de Blog</h2>
         <label for="txtNombre">Titulo: <input required type="text" name="titulo" id="txtTitulo"></label>
         <label for="">Categoria:<input required type="text" name="categoria" id=""></label>
-        <label for="">fecha:<input required type="date" name="date" id="" value="<?php include('./config.php'); echo $date?>"></label>
         <label for="">Descripcion <textarea name="descripcion" id="descripcion" cols="30" rows="10"></textarea></label>
         <label><input type="submit" name="botonGuardar" value="Guardar"></label>
     </form>

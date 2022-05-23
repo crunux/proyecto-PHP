@@ -4,7 +4,7 @@
  {
    $bio = $_GET["EditarBiografia"];
    file_put_contents("biografia.txt", $bio);
-   header("Location: admin.php" );  
+   header("Location: index.php" );
  }
 
 if (isset($_GET["titulo"]) && !empty($_GET["titulo"]) &&
