@@ -1,150 +1,119 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
-
-*{
-    margin:0%;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    background-color:#ffffff;
 }
 
-<!--NavBar-->
 
-#navbar{
+
+/*navbar styling*/
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar {
     position: fixed;
-    width:100%;
-    height: 10%;
-    background-color: #000;
+    width: 100%;
+    padding: 15px 0;
+    background: #000000;
+    font-family: "Ubuntu", sans-serif;
 }
 
-#navbar .logo{
-    text-align:center;
-    font-size: 30px;
-    font-family: 'Ubuntu';
-    color: #fff;
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#navbar .menu li a{
-    text-align:right;
-    font-size: 18px;
-    font-family: 'Ubuntu';
-    color: #fff;
+.navbar .logo a {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 600;
 }
 
-#navbar .menu li{
-    width:100%;
-    height: 10%;
-    background-color: #3F403F;
-}
-
-#navbar .logo{
-    text-align:center;
-    font-size: 30px;
-    font-family: 'Ubuntu';
-    color: #000;
-}
-
-#navbar .menu li a{
-    text-align:right;
-    font-size: 18px;
-    font-family: 'Ubuntu';
-    color: #000;
-}
-
-#name .menu li{
+.navbar .menu il {
     list-style: none;
     display: inline-block;
 }
 
-<!--Home Page-->
-
-.biografia{
-    background-color: darkgray;
-    width:100%;
-    height:40%;
-    top:15%;
+.navbar .menu il a {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s ease;
 }
 
-.avatar{
+.navbar .menu il a:hover {
+    color: rgba(11, 172, 181, 1);
+}
+
+/*Home - Page*/
+
+.avatar {
     border-radius: 50px;
     width: 200px;
     height: 200px;
-    position:fixed;
+    position: absolute;
     left: 44%;
     top: 10%;
 }
-.avatar > .img{
+
+.avatar>.img {
     width: 100%;
     height: 100%;
-    border-radius: 75px; 
+    border-radius: 75px;
 }
 
 .encabezadoB{
-    position:fixed;
-    left: 46.5%;
     top: 45%;
-    font-family: "Ubuntu";
-    color: #000;
+    left: 47%;
+    position: absolute;
+    font-family: 'Ubuntu';
 }
 
 .bio{
-    width: 75%;
-    stroke-opacity: 5px;
-    text-align: center;
-    font-size: 16px;
-    position:fixed;
-    top: 55%;
-    left: 13%;
-    font-family: "Poppins";
-    color: #000;
+    top: 53%;
+    left: 14.5%;
+    position: absolute;
+    font-family: 'Poppins';
+    font-size: 18px;
+    width: 1000px;
+    height: 400px;
 }
 
 .secblog{
-    position:fixed;
-    top:85%;
-    width:100%;
+    top: 85%;
+    position: absolute;
+    width: 100%;
+    height: 25%;
 }
 
-.secblog div h2{
-    font-family: "Poppins";
-    font-size: 18px;
-    color: gray;
-    position: fixed;
-    left:10%;
+/*Admin - page*/
+.container {
+    position: absolute;
+    top: 25%;
+    left: 20%;
 }
 
-
-
-<!--Admin Page-->
-
-.container{
-    position:fixed;
-    top:25%;
-    left:20%;
-}
-
-.container .admin{
-    text-align:center;
-    font-size:25px;
+.container .admin {
+    top: 0;
+    left: 30%;
+    position: absolute;
+    font-size: 25px;
     font-family: "Ubuntu";
 }
 
-
-#submit{
-    width: 75px;
-    height: 40px;
-    background: #000;
-    color:#fff;
-    font-size: 16px;
-    font-family:"Poppins"
-}
-
-#EditarBiografia{
-    text-align:justify;
+#EditarBiografia {
+    text-align: justify;
     line-height: 100%;
     letter-spacing: normal;
-    font-family: 16px;
+    font-family: 14px;
     font-family: "Poppins";
 }
 
@@ -154,6 +123,28 @@
     letter-spacing: normal;
     font-family: 16px;
     font-family: "Poppins";
+}
+
+#submit {
+    width: 75px;
+    height: 30px;
+    background: #000;
+    position: absolute;
+    top: 100%;
+    left: 40%;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Poppins"
+}
+
+.blogBox{
+    top: 95%;
+    left: 40%;
+    position:absolute;
+}
+
+.EmcabezadoBlog{
+    text-align: center;
 }
 
 <!--Blog Pages-->
