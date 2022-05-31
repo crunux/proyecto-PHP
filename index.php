@@ -36,7 +36,7 @@
     <!--Seccion Blog-->
     <div class="secblog">
         <h2>Blog mas recientes.</h2>
-        <div class= "center">
+        <div class="center">
             <?php
             $blog = file("blog.txt");
             $blog = array_reverse($blog);
@@ -94,6 +94,12 @@
             ?>
         </div>
     </div>
+    <footer>
+        <?php
+        echo "Copyright &copy; 2021-2022";
+        include("./detectNavegador.php")
+        ?>
+    </footer>
 </body>
 
 </html>

@@ -82,6 +82,12 @@
 
         ?>
     </div>
+    <footer>
+        <?php
+        echo "Copyright &copy; 2021-2022";
+        include("./detectNavegador.php")
+        ?>
+    </footer>
 </body>
 
 </html>
