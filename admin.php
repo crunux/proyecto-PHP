@@ -25,8 +25,8 @@
         <h1 class="admin">Administrador de Paginas</h1>
         <form action="config.php" method="get">
             <h2 class="editEncabezado">Editar Biografia</h2>
-            <textarea name="EditarBiografia" id="EditarBiografia" cols="65" rows="20"><?php
-                                                                                        echo file_get_contents("biografia.txt"); ?></textarea>
+            <textarea class="form-control" name="EditarBiografia" id="EditarBiografia" cols="30" rows="15"><?php
+                                                                                                            echo file_get_contents("biografia.txt"); ?></textarea>
             <input type="submit" value="Guardar" id="submit">
         </form>
     </div>

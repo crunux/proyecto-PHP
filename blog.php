@@ -20,17 +20,68 @@
             </ul>
         </div>
     </nav>
-    <?php
-    //file permite obtener el contenido de un archivo como un arreglo. Cada linea del archivo, representa un elemento del arreglo.
-    $blog = file("blog.txt");
-    for ($i = 0; $i < count($blog); $i++) {
-        $filaActual = explode("|", $blog[$i]);
-        $id = $filaActual[0];
-        echo "<div class='card' style='width: 18rem;'>" . "<div class='card-body'>";
-        echo $i >= 0 ? "<h2 class='card-title'>" . $filaActual[1] . "</h2>" . "<h6 class='card-subtitle mb-2 text-muted'>" . $filaActual[2] . "</h6>" . "<h6 class='card-subtitle mb-2 text-muted'>" . "<p class='card-text'>" . $filaActual[3] . "</h6>" . $filaActual[4] . "</p>" : "<h6>" . "no se encontraron blogs" . "</h6>";
-        echo "</div>" . "</div>";
-    }
-    ?>
+    <div class="container2">
+        <h3 class="title">
+            Blogs
+        </h3>
+    </div>
+    <div class="blog">
+        <?php
+        $blog = file("blog.txt");
+        $blog = array_reverse($blog);
+
+
+        $contenidoDePagina = 5;
+        $limite = $contenidoDePagina;
+
+        $pagina = 1;
+
+        if (isset($_GET["anterior"])) {
+            $pagina = $_GET["anterior"] ? $_GET["anterior"] : 1;
+        }
+
+        if (isset($_GET["siguiente"])) {
+            $pagina = $_GET["siguiente"];
+        }
+
+        $offset = ($pagina - 1) * $contenidoDePagina;
+        $conteo = count($blog);
+        $paginas = ceil($conteo / $contenidoDePagina);
+        $aux = 0;
+
+        for ($i = $offset; $aux < $contenidoDePagina; $i++) {
+
+            if (!isset($blog[$i])) {
+                break;
+            }
+
+            ///echo "<div class='row row-cols-1 row-cols-md-2 g-4'>";
+            $filaActual = explode("|", $blog[$i]);
+
+            $mostrarBlog = <<< BLOG
+                <div class='col card text-bg-dark mb-3' style= 'max-width: 18rem';>
+                    <div class='card-body'>
+                        <h2 class='card-title'>$filaActual[1]</h2>
+                        <h6 class='card-subtitle mb-2 text-muted'>$filaActual[2]</h6>
+                        <h6 class='card-subtitle mb-2 text-muted'>$filaActual[3]</h6>
+                        <p class='card-text'>$filaActual[4]</p>
+                    </div>
+                </div>
+
+                BLOG;
+            echo $mostrarBlog;
+            $contador = 0;
+            $aux++;
+        }
+        echo "<form method='GET'>";
+        echo "<div class='botonSigAnt'>";
+        echo "<button class='botonBlog' type='submit' name='anterior' value='" . ($pagina - 1 ? $pagina - 1 : 1) . "'>Anterior</button>";
+        echo "<button class='botonBlog' type='submit' name='siguiente' value='" . ($pagina + 1 <= $paginas ? $pagina + 1 : $pagina) . "'>Siguiente</button>";
+        echo "</div>";
+        echo "</form>";
+
+        ?>
+    </div>
 </body>
 
 </html>
