@@ -16,8 +16,8 @@
         <div class="max-width">
             <div class="logo"><a href="#">Joan Cruz - 100456854</a></div>
             <ul class="menu">
-                <il><a href="#">Blog</a></il>
-                <il><a href="#">Admin</a></il>
+                <il><a href="./blog.php">Blog</a></il>
+                <il><a href="./login.php">Admin</a></il>
             </ul>
         </div>
     </nav>
@@ -96,7 +96,7 @@
     </div>
     <footer>
         <?php
-        echo "Copyright &copy; 2021-2022";
+        echo "<p>Copyright &copy; 2021-2022</p>";
         include("./detectNavegador.php")
         ?>
     </footer>

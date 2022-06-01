@@ -43,7 +43,7 @@
     </div>
     <footer>
         <?php
-        echo "Copyright &copy; 2021-2022";
+        echo "<p>Copyright &copy; 2021-2022</p>";
         include("./detectNavegador.php")
         ?>
     </footer>
