@@ -29,4 +29,4 @@ if(strpos($user_agent, 'MSIE') !== FALSE)
 }
 
 $navegador = getBrowser($user_agent);
-echo "El navegador con el que estás visitando esta web es: ".$navegador;
+echo "<p>El Navegador Utilizado: ".$navegador."</p>";

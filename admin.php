@@ -15,8 +15,8 @@
         <div class="max-width">
             <div class="logo"><a href="#">Joan Cruz - 100456854</a></div>
             <ul class="menu">
-                <il><a href="#">Home</a></il>
-                <il><a href="#">Blog</a></il>
+                <il><a href="./index.php">Home</a></il>
+                <il><a href="./blog.php">Blog</a></il>
             </ul>
         </div>
     </nav>
