@@ -1,2 +1,2 @@
-1|lapiz|Objeto|23/05/2022|asdfsdvjisbvhjfsvhufdbhvudfv
-2|mesa|Objeto|23/05/2022|scvsdfvfdvdfvfdvdfvfd fe sdgfsd sdfsdfds
+1|PyScript|Technologia|23/05/2022|PyScript es un marco que permite a los usuarios crear aplicaciones ricas de Python en el navegador utilizando la interfaz de HTML y el poder de Pyodide, WASM y las tecnologías web modernas. El marco PyScript brinda a los usuarios de todos los niveles de experiencia acceso a un lenguaje de programación expresivo y fácil de aprender con innumerables aplicaciones.
+2|NodeJS|Technologia|23/05/2022|Node.js es un entorno en tiempo de ejecución multiplataforma, de código abierto, para la capa del servidor basado en el lenguaje de programación JavaScript, asíncrono, con E/S de datos en una arquitectura orientada a eventos y basado en el motor V8 de Google. 
