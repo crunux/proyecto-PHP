@@ -1,11 +1,14 @@
- <form action="./login.php" method="GET" class="login">
-     <input name="usuario" type="text" placeholder="Usuario">
-     <br><br>
-     <input name="password" type="password" placeholder="Contraseña">
-     <br><br>
-     <!--Lo siguiente envía el formulario-->
-     <input type="submit" value="Acceder">
- </form>
+<div id="login">
+    <h2>Inicio de seccion de Administrador</h2>
+    <form action="./login.php" method="GET" class="login">
+        <input name="usuario" type="text" placeholder="Usuario">
+        <br><br>
+        <input name="password" type="password" placeholder="Contraseña">
+        <br><br>
+        <!--Lo siguiente envía el formulario-->
+        <input type="submit" value="Acceder">
+    </form>
+</div>
 
 <?php
 if (

@@ -1,15 +1,67 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
 }
 
 
+
+/* Navbar */
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+.navbar {
+    position: absolute;
+    width: 100%;
+    padding: 15px 0;
+    background: #000000;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navbar .max-width {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo a {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .menu il {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu il a {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu il a:hover {
+    color: rgba(11, 172, 181, 1);
+}
+
 /*Home - Page*/
 
+.biografia{
+    display: flex;
+    height: 100vh;
+    color: #000;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
 .avatar {
     border-radius: 50px;
     width: 200px;
@@ -23,4 +75,225 @@
     width: 100%;
     height: 100%;
     border-radius: 75px;
+}
+
+.text{
+    position: absolute;
+    left: 45.5%;
+    top: 45%;
+    font-size: 40px; 
+    height: 500;
+}
+
+.bio{
+    position: absolute;
+    left: 1%;
+    top: 52%;
+    padding: 5px;
+    font-size: 20px;
+}
+
+/*Home Blog*/
+.textBlog{
+    text-align: center;
+    padding: 10px;
+    color:gray;
+}
+
+.secblog {
+    display: flex;
+    height: 100vh;
+    color: #000;
+    min-height: 500px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.center{
+    width: 100%;
+    display: flex;
+    gap:50px;
+    flex-wrap:wrap;
+    justify-content: center;
+}
+
+.cardContent{
+    width: 310px;
+    height: 350px;
+    padding: 20px;
+    box-shadow: 1px 1px 5px rgb(124, 124, 124);
+}
+
+.cardContent:hover {
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
+}
+
+.card-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-title h2{
+    font-size: 25px;
+    font-weight: 250;
+}
+
+hr{
+    width: 100%;
+    height: 3px;
+    background: rgb(124, 124, 124)
+}
+.card-subtitle{
+    font-size: 14px;
+    font-weight: 150;
+    color: gray;
+
+}
+card-text{
+    align-items: center;
+    text-align: center;
+}
+
+/*Blog*/
+
+.container2{
+    padding:100px;
+}
+
+.centerblogs{
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.titleblogs{
+    font-size: 30px;
+    padding:2px;
+}
+
+.Buttonblog {
+    width: 4rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+/*admin*/
+.admin{
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+}
+
+.EncabezadoBlog {
+    left:auto;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+}
+
+.container{
+    padding: 100px;
+    
+    background-color: lightgray;
+}
+
+.blogBox{
+    background: lightgray;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.field{
+    display: flex;
+    flex-direction: column;
+    width: 14rem;
+    margin: 0.5rem 0;
+}
+
+.field label{
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    color: black;
+}
+
+.field input{
+    font-size: 1.1rem;
+    height: 2.2rem;
+    padding-left: 0.5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.textbox{
+    display: flex;
+    flex-direction: column;
+    width: 40rem;
+    margin: 0.75rem 0;
+}
+
+.textbox2 {
+    display: flex;
+    flex-direction: column;
+    width: 25rem;
+    margin: 0.75rem 0;
+}
+
+.textbox textarea{
+    font-size: 1.1rem;
+    max-height: 100%;
+    height: 30rem;
+    max-width: 45rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+    
+}
+
+.textbox2 textarea {
+    font-size: 1.1rem;
+    max-height: 100%;
+    height: 20rem;
+    max-width: 25rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
+    border: 2px solid black;
+    border-radius: 5px;
+
+}
+
+.textbox label input {
+    width: 4rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.textbox2 label input{
+    width:4rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+
+.loginButton{
+    width: 4rem;
+    height: 3rem;
+    border-radius: 5px;
+    border: 2px solid black;
 }
