@@ -22,9 +22,9 @@
 
     <section class="container">
         <h1 class="admin">Administrador de Paginas</h1>
+        <h2 class="editEncabezado">Editar Biografia</h2>
         <form action="config.php" method="get">
             <div class="textbox">
-                <label class="editEncabezado">Editar Biografia</label>
                 <textarea class="form-control" name="EditarBiografia" id="EditarBiografia" cols="30" rows="15"><?php
                                                                                                                 echo file_get_contents("biografia.txt"); ?></textarea>
                 <label><input type="submit" value="Guardar" id="submit"></label>

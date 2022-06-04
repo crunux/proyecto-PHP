@@ -97,7 +97,7 @@
 .textBlog{
     text-align: center;
     padding: 10px;
-    color:gray;
+    color:rgb(0, 0, 0);
 }
 
 .secblog {
@@ -148,7 +148,7 @@ hr{
 .card-subtitle{
     font-size: 14px;
     font-weight: 150;
-    color: gray;
+    color: rgb(36, 36, 36);
 
 }
 card-text{
@@ -172,7 +172,7 @@ card-text{
 
 .titleblogs{
     font-size: 30px;
-    padding:2px;
+    padding: 3px;
 }
 
 .Buttonblog {
@@ -185,20 +185,26 @@ card-text{
 /*admin*/
 .admin{
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 600;
     font-family: 'Ubuntu';
 }
 
 .EncabezadoBlog {
     left:auto;
-    font-size: 30px;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+}
+
+.editEncabezado {
+    left: auto;
+    font-size: 24px;
     font-weight: 500;
     font-family: 'Ubuntu';
 }
 
 .container{
     padding: 100px;
-    
     background-color: lightgray;
 }
 
@@ -291,9 +297,28 @@ form{
     border: 2px solid black;
 }
 
-.loginButton{
-    width: 4rem;
-    height: 3rem;
-    border-radius: 5px;
-    border: 2px solid black;
+.login{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 400;
+    background: gray;
+    border-radius: 10%;
+}
+
+.login h2{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+.login form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.login form .usuario{
+    position: relative;
+    margin: 30px 0;
 }

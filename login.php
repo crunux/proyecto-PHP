@@ -1,14 +1,35 @@
-<div id="login">
-    <h2>Inicio de seccion de Administrador</h2>
-    <form action="./login.php" method="GET" class="login">
-        <input name="usuario" type="text" placeholder="Usuario">
-        <br><br>
-        <input name="password" type="password" placeholder="Contraseña">
-        <br><br>
-        <!--Lo siguiente envía el formulario-->
-        <input type="submit" value="Acceder">
-    </form>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="login">
+        <h2>Inicio de seccion de Administrador</h2>
+        <form action="./login.php" method="GET">
+            <div class="Usuario">
+                <label>Usuario</label>
+                <input name="usuario" type="text" placeholder="Usuario">
+            </div>
+            <br><br>
+            <div class="contrasena">
+                <label>Contrasena</label>
+                <input name="password" type="password" placeholder="Contraseña">
+            </div>
+            <br><br>
+            <!--el boton siguiente envía el formulario-->
+            <input class="acceder" type="submit" value="Acceder">
+        </form>
+    </div>
+</body>
+
+</html>
 
 <?php
 if (
