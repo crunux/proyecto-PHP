@@ -1,7 +1,5 @@
-Joan Cruz is a 27-year-old government politician who enjoys hockey, vandalising bus stops and extreme ironing. She is smart and creative, but can also be very unfriendly and a bit moody.
-She is Domincan who defines herself as straight. She has a degree in philosophy, politics and economics.
-Physically, Joan is in pretty good shape. She is average-height with light skin, auburn hair and blue eyes.
-She grew up in a working class neighbourhood. She was raised by her mother, her father having left when she was young.
-She is currently married to Dustin Lochlan Smyth. Dustin is the same age as her and works as a scientist.
-Joan has three children with husband Dustin: Billie aged 2, Jonah aged 3 and Saul aged 5.
-Joan's best friend is a government politician called Derrick Kim. They are inseparable. She also hangs around with Conrad Kelly and Pearl Knight. They enjoy bargain hunting together.
+Joan Cruz de 27 anos nacido en la ciudad de la Vega, en el 1995, Amante a la technologia, los animes, peliculas y series de accion y ciencia ficcion.
+Actualmente Estudia informatica en la universidad de la UASD y Trabaja como soporte technico en un Centro Medico. 
+su area de enfoque es en el back-end, pero piensa en convertirse en fullstack, pero primero empezara por una parte de el y luego la otra. 
+Su meta es convertirse en desarrollador de software tanto en web como Desktop y Movil ese es su enfoque.
+Es muy curioso y le gusta aprender cosas nuevas, le gusta compartir con la familia amigos.
