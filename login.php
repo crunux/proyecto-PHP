@@ -12,7 +12,7 @@
 <body>
     <div class="login">
         <h2>Inicio de seccion de Administrador</h2>
-        <form action="./login.php" method="GET">
+        <form action="./login.php" method="POST">
             <div class="Usuario">
                 <label>Usuario</label>
                 <input name="usuario" type="text" placeholder="Usuario">
@@ -33,26 +33,45 @@
 
 <?php
 if (
-    isset($_GET["usuario"]) && !empty($_GET["usuario"]) &&
-    isset($_GET["password"]) && !empty($_GET["password"])
+    isset($_POST["usuario"]) && !empty($_POST["usuario"]) &&
+    isset($_POST["password"]) && !empty($_POST["password"])
 ) {
-    $usuario = $_GET["usuario"];
-    $contrasena = $_GET["password"];
+    $usuario = $_POST["usuario"];
+    $contrasena = $_POST["password"];
     $archivo = file_get_contents("./contrasenas.txt");
     $validacion = strpos($archivo, $contrasena);
 
     if ($validacion !== FALSE && $usuario === "admin") {
         header("Location:./admin.php");
-    } elseif ($validacion !== TRUE && $usuario !== "admin") {
+    } elseif ($validacion === FALSE && $usuario !== "admin") {
         echo "<script>alert('Usuario & Contrasena Incorrecto: Por favor introduzca datos Validos')</script>";
     } elseif ($usuario !== "admin" && $validacion !== FALSE) {
-        echo "<script>alert('Usuario Incorrecto: Por favor introduzca un usuario Valido')</script>";
+        echo "<script>alert('Usuario & Contrasena Incorrecto: Por favor introduzca datos Validos')</script>";
         //header("Location:./login.php");
     } elseif ($validacion === FALSE && $usuario === "admin") {
-        echo "<script>alert('Contrasena Incorrecta: Por favor introduzca una contrasena Valida')</script>";
+        echo "<script>alert('Usuario & Contrasena Incorrecto: Por favor introduzca datos Validos')</script>";
         //header("Location:./login.php");
     } else {
         header("Location:./login.php");
     }
+}
+
+$pass = file("./contrasenas.txt");
+// for ($i = 0; $i < count($pass); $i++) {
+//     $passActual = $pass[$i];
+    
+// }
+$passActual = $pass[0];
+echo "<p>".$pass."</p";
+
+if (isset($_POST["contrasenaVieja"]) == $passActual){
+    if ($_POST["newContrasena"] == $_POST["confirmarContrasena"]){
+        $contrasenaAsignar = $_POST["confirmarContrasena"];
+        file_put_contents("contrasenas.txt", $contrasenaAsignar);
+    }else{
+        echo "<script>alert('Las contrasenas no coinciden')</script>";
+    }
+}else if(isset($_POST["contrasenaVieja"]) != $passActual){
+    echo "<script>alert('Introduzca su antigua contrasena correctamente')</script>";
 }
 ?>

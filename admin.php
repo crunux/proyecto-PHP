@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./index.css">
     <title>Administrador - Joan Cruz</title>
 </head>
 
@@ -23,7 +23,7 @@
     <section class="container">
         <h1 class="admin">Administrador de Paginas</h1>
         <h2 class="editEncabezado">Editar Biografia</h2>
-        <form action="config.php" method="get">
+        <form action="config.php" method="POST">
             <div class="textbox">
                 <textarea class="form-control" name="EditarBiografia" id="EditarBiografia" cols="30" rows="15"><?php
                                                                                                                 echo file_get_contents("biografia.txt"); ?></textarea>
@@ -33,15 +33,30 @@
     </section>
     <section class="blogBox">
         <h2 class="EncabezadoBlog">Registro de Blog</h2>
-        <form action="./config.php" method="GET">
+        <form action="./config.php" method="POST">
             <div class="field">
                 <label for="txtNombre" class="form-label">Titulo: <input class="form-control" required type="text" name="titulo" id="txtTitulo"></label>
             </div>
             <div class="field">
-                <label for="" class="form-label">Categoria:<input class="form-control" required type="text" name="categoria" id=""></label>
+                <label for="" class="form-label">Categoria: <input class="form-control" required type="text" name="categoria" id=""></label>
             </div>
             <div class="textbox2">
-                <label for="" class="form-label">Descripcion <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="8"></textarea></label>
+                <label for="" class="form-label">Descripcion: <textarea class="form-control" name="descripcion" id="descripcion" cols="30" rows="8"></textarea></label>
+                <label><input type="submit" value="Guardar" id="submit"></label>
+            </div>
+        </form>
+    </section>
+    <section class="cambiarContra">
+        <h2 class="cambiarContrasena">Cambiar contrasena de admin</h2>
+        <form action="./login.php" method="POST">
+            <div class="field">
+                <label for="oldpassword" class="form-label">Vieja Contrasena: <input required type="password" name="contrasenaVieja"></label>
+            </div>
+            <div class="field">
+                <label for="newpassword" class="form-label">Nueva Contrasena: <input required type="password" name="newContrasena"></label>
+            </div>
+            <div class="field">
+                <label for="confirmarpassword" class="form-label">Confirmar Contrasena: <input required type="password" name="confirmarContrasena"></label>
                 <label><input type="submit" value="Guardar" id="submit"></label>
             </div>
         </form>

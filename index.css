@@ -119,6 +119,7 @@
 }
 
 .cardContent{
+    border-radius: 50px;
     width: 310px;
     height: 350px;
     padding: 20px;
@@ -152,8 +153,7 @@ hr{
     color: rgb(36, 36, 36);
 
 }
-card-text{
-    align-items: center;
+.card-text{
     text-align: center;
 }
 
@@ -298,6 +298,23 @@ form{
     border: 2px solid black;
 }
 
+.cambiarContra {
+    background: lightgray;
+}
+
+.cambiarContrasena {
+    left: auto;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Ubuntu';
+}
+
+.field #submit{
+    font-size: 1.1rem;
+}
+
+/*Login Page*/
+
 .login{
     position:absolute;
     top: 50%;
@@ -323,3 +340,4 @@ form{
     position: relative;
     margin: 30px 0;
 }
+

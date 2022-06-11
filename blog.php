@@ -34,12 +34,12 @@
 
             $pagina = 1;
 
-             if (isset($_GET["anterior"])) {
-                $pagina = $_GET["anterior"] ? $_GET["anterior"] : 1;
+             if (isset($_POST["anterior"])) {
+                $pagina = $_POST["anterior"] ? $_POST["anterior"] : 1;
             }
 
-            if (isset($_GET["siguiente"])) {
-                $pagina = $_GET["siguiente"];
+            if (isset($_POST["siguiente"])) {
+                $pagina = $_POST["siguiente"];
              }
 
             $offset = ($pagina - 1) * $contenidoDePagina;
@@ -72,7 +72,7 @@
             $contador = 0;
             $aux++;
             }
-            echo "<form method='GET'>";
+            echo "<form method='POST'>";
             echo "<button class='Buttonblog' type='submit' name='anterior' value='" . ($pagina - 1 ? $pagina - 1 : 1) . "'>Anterior</button>";
             echo "<button class='Buttonblog' type='submit' name='siguiente' value='" . ($pagina + 1 <= $paginas ? $pagina + 1 : $pagina) . "'>Siguiente</button>";
             echo "</form>";

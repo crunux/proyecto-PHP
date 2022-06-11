@@ -1,15 +1,15 @@
 <?php
 
- if (isset($_GET["EditarBiografia"]))
+ if (isset($_POST["EditarBiografia"]))
  {
-   $bio = $_GET["EditarBiografia"];
+   $bio = $_POST["EditarBiografia"];
    file_put_contents("biografia.txt", $bio);
    header("Location: index.php" );
  }
 
-if (isset($_GET["titulo"]) && !empty($_GET["titulo"]) &&
-  isset($_GET["categoria"]) && !empty($_GET["categoria"]) &&
-  isset($_GET["descripcion"]) && !empty($_GET["descripcion"])
+if (isset($_POST["titulo"]) && !empty($_POST["titulo"]) &&
+  isset($_POST["categoria"]) && !empty($_POST["categoria"]) &&
+  isset($_POST["descripcion"]) && !empty($_POST["descripcion"])
 ) {
   $blog = file("blog.txt");
   $ultimoblog = $blog[count($blog) - 1];
@@ -22,10 +22,10 @@ if (isset($_GET["titulo"]) && !empty($_GET["titulo"]) &&
   $id = $ultimoId + 1;
 
   $nuevoRegistro = "$id|";
-  $nuevoRegistro .= $_GET["titulo"] . "|";
-  $nuevoRegistro .= $_GET["categoria"] . "|";
+  $nuevoRegistro .= $_POST["titulo"] . "|";
+  $nuevoRegistro .= $_POST["categoria"] . "|";
   $nuevoRegistro .= $fecha . "|";
-  $nuevoRegistro .= $_GET["descripcion"] . "\n";
+  $nuevoRegistro .= $_POST["descripcion"] . "\n";
 
   //para guardar usamos file_put_contents. Pasamos la ruta como primer parametro y el contenido a guardar como segundo parametro
   //Si queremos que se agregue al final el nuevo contenido, entonces debemos pasar como tercer parametro FILE_APPEND
