@@ -62,7 +62,7 @@ $pass = file("./contrasenas.txt");
     
 // }
 $passActual = $pass[0];
-echo "<p>".$pass."</p";
+
 
 if (isset($_POST["contrasenaVieja"]) == $passActual){
     if ($_POST["newContrasena"] == $_POST["confirmarContrasena"]){
@@ -71,7 +71,5 @@ if (isset($_POST["contrasenaVieja"]) == $passActual){
     }else{
         echo "<script>alert('Las contrasenas no coinciden')</script>";
     }
-}else if(isset($_POST["contrasenaVieja"]) != $passActual){
-    echo "<script>alert('Introduzca su antigua contrasena correctamente')</script>";
 }
 ?>
